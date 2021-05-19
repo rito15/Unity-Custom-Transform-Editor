@@ -1,4 +1,4 @@
-#if UNITY_EDITOR && RITO_USE_CUSTOM_TRANSFORM_EDITOR
+#if UNITY_EDITOR
 
 using UnityEngine;
 using UnityEditor;
@@ -10,9 +10,12 @@ using UnityEditor;
 
 namespace Rito.EditorPlugins
 {
+#if RITO_USE_CUSTOM_TRANSFORM_EDITOR
     [CustomEditor(typeof(Transform))]
+#endif
     public class TransformEditor : UnityEditor.Editor
     {
+#if RITO_USE_CUSTOM_TRANSFORM_EDITOR
         private Transform transform;
 
         private static bool globalFoldOut;
@@ -264,6 +267,7 @@ namespace Rito.EditorPlugins
         }
 
 #endregion
+#endif
     }
 }
 #endif

@@ -15,7 +15,6 @@ namespace Rito.EditorPlugins
 #endif
     public class TransformEditor : UnityEditor.Editor
     {
-#if RITO_USE_CUSTOM_TRANSFORM_EDITOR
         private Transform transform;
 
         private static bool globalFoldOut;
@@ -32,7 +31,11 @@ namespace Rito.EditorPlugins
             transform = target as Transform;
 
             texturePath = TransformEditorHelper.TexturePath;
+
             refreshTexture = AssetDatabase.LoadAssetAtPath(texturePath, typeof(Texture2D)) as Texture2D;
+            if(refreshTexture == null)
+                refreshTexture = (Texture2D)AssetDatabase.LoadAssetAtPath(
+                    "Packages/com.unity.customtransformeditor/Include/Editor Resources/Refresh.png", typeof(Texture2D));
 
             // 치트키 : 기존 TransformEditor로부터 RotationField 빌려쓰기
             if (_localRotationGUI == null)
@@ -56,7 +59,7 @@ namespace Rito.EditorPlugins
         /***********************************************************************
         *                               Inspector Methods
         ***********************************************************************/
-#region .
+        #region .
         public override void OnInspectorGUI()
         {
             // 1. Local Transform
@@ -207,11 +210,11 @@ namespace Rito.EditorPlugins
             EditorGUILayout.EndHorizontal();
         }
 
-#endregion
+        #endregion
         /***********************************************************************
         *                               Private Methods
         ***********************************************************************/
-#region .
+        #region .
         /// <summary> 버튼을 그립니당 </summary>
         private void DrawRefreshButton(in Color color, System.Action action)
         {
@@ -256,18 +259,17 @@ namespace Rito.EditorPlugins
             return vector;
         }
 
-#endregion
+        #endregion
         /***********************************************************************
         *                               Public Methods
         ***********************************************************************/
-#region .
+        #region .
         public static void LoadGlobalFoldOutValue(bool value)
         {
             globalFoldOut = value;
         }
 
-#endregion
-#endif
+        #endregion
     }
 }
 #endif

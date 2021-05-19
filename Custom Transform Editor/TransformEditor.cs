@@ -35,7 +35,7 @@ namespace Rito.EditorPlugins
             refreshTexture = AssetDatabase.LoadAssetAtPath(texturePath, typeof(Texture2D)) as Texture2D;
             if(refreshTexture == null)
                 refreshTexture = (Texture2D)AssetDatabase.LoadAssetAtPath(
-                    "Packages/com.unity.customtransformeditor/Include/Editor Resources/Refresh.png", typeof(Texture2D));
+                    "Packages/com.rito.customtransformeditor/Include/Editor Resources/Refresh.png", typeof(Texture2D));
 
             // 치트키 : 기존 TransformEditor로부터 RotationField 빌려쓰기
             if (_localRotationGUI == null)

@@ -1,0 +1,16 @@
+{
+	"name" : "com.rito.customtransformeditor",
+	"version": "1.0.0",
+	"displayName" :"Custom Transform Editor",
+	"description" :"Custom Transform Editor",
+	"unity": "2019.4",
+	"dependencies": {},
+	"keywords": ["rito","unity","editorplugin"],
+	"author":
+	{
+		"name":"Rito",
+		"email":"ghdtkals15@gmail.com",
+		"url":"https://github.com/rito15"
+	},
+	"category": "Unity"
+}

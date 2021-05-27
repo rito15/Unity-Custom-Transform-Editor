@@ -8,7 +8,7 @@ using UnityEditor;
 // 날짜 : 2021-02-17 02:06
 // 작성자 : Rito
 
-namespace Rito.EditorPlugins
+namespace Rito.EditorUtilities
 {
 #if RITO_USE_CUSTOM_TRANSFORM_EDITOR
     [CustomEditor(typeof(Transform))]

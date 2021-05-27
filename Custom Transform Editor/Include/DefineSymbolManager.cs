@@ -10,7 +10,7 @@ using UnityEditor;
 // 날짜 : 2021-03-12 PM 6:41:03
 // 작성자 : Rito
 
-namespace Rito.EditorPlugins
+namespace Rito.EditorUtilities
 {
     public static class DefineSymbolManager
     {

@@ -6,4 +6,4 @@
 
 # How To Import
 
-`[Window]` - `[Package Manager]` - `[+]` - `[Add package from git URL]`
+`[Window]` - `[Package Manager]` - `[+]` - `[Add package from git URL]` - `https://github.com/rito15/Unity-Custom-Transform-Editor.git`

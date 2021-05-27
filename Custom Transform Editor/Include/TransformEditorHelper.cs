@@ -11,7 +11,7 @@ using System.Reflection;
 // 날짜 : 2021-02-18 AM 4:41:01
 // 작성자 : Rito
 
-namespace Rito.EditorPlugins
+namespace Rito.EditorUtilities
 {
     [InitializeOnLoad]
     public static class TransformEditorHelper

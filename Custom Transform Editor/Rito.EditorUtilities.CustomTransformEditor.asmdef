@@ -1,5 +1,5 @@
 {
-    "name": "Rito.EditorPlugins.CustomTransformEditor",
+    "name": "Rito.EditorUtilities.CustomTransformEditor",
     "references": [],
     "includePlatforms": [
         "Editor"
